@@ -1,0 +1,19 @@
+.map_section
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    margin-top: 200px;
+    margin-left: 475px;
+    height: 200px;
+    width: 600px;
+}
+
+.heading
+{
+    text-align: left;
+    font-size:40px;
+    font-weight: bolder;
+}
