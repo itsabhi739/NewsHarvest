@@ -17,7 +17,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg" style={myStyle}>
   <div className="container-fluid"  style={myStyle}>
     <a className="navbar-brand my-3" href="/" style={myStyle}>
-    <img src="NewsHarvest.png" className="d-block w-100" alt="..."/>
+    <img src="Logo.png" alt="Logo" srcset="" />
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

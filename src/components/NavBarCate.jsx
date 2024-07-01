@@ -6,8 +6,9 @@ const NavBarCate = () => {
     let myStyle = 
     {
       borderStyle : "none",
-      color :"#774023",
-      backgroundColor:"#f3e7c9",
+      color :"#f3e7c9",
+      // #774023
+      backgroundColor:"#000000",
     }
 
     function ChangeColor()
@@ -17,7 +18,7 @@ const NavBarCate = () => {
 }
 
     return (
-      <div className='container' style={{backgroundColor:"#f3e7c9"}}>
+      <div className='container' style={{backgroundColor:"#000000"}}>
         <ul className="nav nav-tabs  d-flex justify-content-center ">
   <li className="nav-item" >
     <Link className='nav-link' aria-current="page" to="/business"><button type="button" className='navButton' value={"button"}  style={myStyle} >Business</button></Link>

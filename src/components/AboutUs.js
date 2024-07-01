@@ -14,7 +14,7 @@ const AboutUs = () => {
   <div className="container" style={{marginTop:"180px"}}>
     <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
       <div className="col-12 col-lg-6 col-xl-5" style={{height:634}}>
-        <img className="img-fluid" loading="lazy" src="NewsHarvest.gif" alt="profilephoto"/>
+        <img className="img-fluid" loading="lazy" srcSet="NewsHarvest.gif" alt="Logo"/>
 
         <div className="container" style={{marginLeft : "64px"}}>
 

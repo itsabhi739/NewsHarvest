@@ -23,7 +23,7 @@ Furthermore, could you provide some insight into your company's mission and valu
 
 Finally, I'd like to inquire about any specific challenges or pain points your team may be facing. By understanding your obstacles, I can offer insights and solutions to help you overcome them more effectively.
 
-<br /><span style={{fontWeight:"bold" , fontSize:"30px"}}>Thank you for the opportunity to assist you</span>, and I look forward to learning more about your team!</p>
+<br /><span style={{fontWeight:"bold" , fontSize:"30px" , display:'flex', flexDirection:'column' , alignContent:'center' , alignItems:'center' , justifyContent:'center'}}>Thank you for the opportunity to assist you</span>, and I look forward to learning more about your team!</p>
    </div>
 
     <div className="row">

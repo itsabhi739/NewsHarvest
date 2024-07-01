@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Placeholder extends Component {
-  render() {
-    return (
-      <div>
+const Placeholder = () => {
+  return (
+    <>
+    <div>
         <div className="card" aria-hidden="true">
    <img src="..." className="card-img-top" alt="..."/>
    <div className="card-body">
@@ -21,6 +21,8 @@ export default class Placeholder extends Component {
    </div>
  </div> 
       </div>
-    )
-  }
+    </>
+  )
 }
+
+export default Placeholder
