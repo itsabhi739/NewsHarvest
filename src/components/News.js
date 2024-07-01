@@ -69,10 +69,11 @@ export default class News extends Component {
 
      async componentDidMount()
     {
+      this.props.setProgress(10);
       let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=a4f2093ad0674354800d8e9e4348a940&page=1&pageSize=${this.props.pageSize}`;
       this.setState({loading:true})
-      // this.props.setProgress(0);
       let data  = await fetch(url);
+      this.props.setProgress(30);
       let parsedData = await data.json().then((data)=>
       {
         this.setState({
@@ -81,6 +82,7 @@ export default class News extends Component {
           loading: false
      });
       });
+      this.props.setProgress(100);
     }
 
      HandlePrevClick = async()=>
