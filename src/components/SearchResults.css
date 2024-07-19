@@ -11,9 +11,9 @@
 .searchResults
 {
     width:50%;
-    box-shadow: 0px 0px 8px #ddd;
+    box-shadow: 0px 0px 8px #94a3b8;
     border-radius: 10px;
-    background-color: cornsilk;
+    background-color: rgb(241 245 249); 
     margin-top: 10px;
     margin-bottom: 20px;
     max-height: 400px;
@@ -38,7 +38,7 @@ a
 }
 .searchResults div:hover
 {
-    background-color: #F3E7C9 ;
+    background-color: #b3c6df;
     cursor: pointer;
     color: white;
 }

@@ -6,19 +6,18 @@ const NavBarCate = () => {
     let myStyle = 
     {
       borderStyle : "none",
-      color :"#f3e7c9",
-      // #774023
-      backgroundColor:"#000000",
+      color :"#fff",
+      backgroundColor:"#94a3b8",
     }
 
     function ChangeColor()
 {
     let button = document.querySelectorAll(".navButton");
-    button.style.backgroundColor = "#774023";
+    button.style.backgroundColor = "#94a3b8";
 }
 
     return (
-      <div className='container' style={{backgroundColor:"#000000"}}>
+      <div className='container' style={{backgroundColor:"#94a3b8"}}>
         <ul className="nav nav-tabs  d-flex justify-content-center ">
   <li className="nav-item" >
     <Link className='nav-link' aria-current="page" to="/business"><button type="button" className='navButton' value={"button"}  style={myStyle} >Business</button></Link>

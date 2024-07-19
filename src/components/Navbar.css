@@ -1,0 +1,21 @@
+
+.navItem
+{
+    position: relative;
+}
+.navItem::after{
+    transition: all 0.3s;
+    opacity: 0;
+}
+.navItem:hover::after{
+
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color:red;
+    position:absolute;
+    opacity: 1;
+    bottom: 10px;
+    left: 0;
+}
+

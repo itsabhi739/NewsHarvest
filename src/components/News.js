@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 import Spinner from './Spinner';
 import PropTypes from 'prop-types'
-import Footer from './footer/Footer';
+import SmallCards from './smallCards/SmallCards'
+import "./smallCards/SmallCards.css"
+import HeroSection from './HeroSection/HeroSection';
 export default class News extends Component {
 
   static defaultProps = {
@@ -127,9 +129,10 @@ export default class News extends Component {
    
     return (
       <>
+       <HeroSection/>
     <div className="container my-3"  >
-      <marquee behavior="scroll" direction="left" style = {{marginTop : '180px'}}>Welcome to the NewsHarvest - Access and grow with all the news </marquee>
-        <h2 className='my-3 text-center' style={{fontSize:"40px",fontWeight:"bold"}} >{`NewsHarvest ${this.capitalizeFirstLetter(this.props.category)}`}- Top Headlines</h2>
+      {/* <marquee behavior="scroll" direction="left" style = {{marginTop : '180px'}}>Welcome to the NewsHarvest - Access and grow with all the news </marquee> */}
+        <h2 className='my-3 text-center' >{`NewsHarvest ${this.capitalizeFirstLetter(this.props.category)}`}- Top Headlines</h2>
         {this.state.loading && <Spinner/>}
         <div className="container my-3">
           </div>
@@ -137,7 +140,7 @@ export default class News extends Component {
         { (!this.state.loading) && this.state.articles.map((elements, index)=>(
         
           <div className="col-md-4 my-3" key={index}>
-          <NewsItem key  = {index} title = {elements.title?elements.title.slice(0,45):""} description = {elements.description?elements.description.slice(0.88):""} imageUrl = {elements.urlToImage} url = {elements.url}
+          <NewsItem key  = {index} title = {elements.title?elements.title.slice(0,45):""} description = {elements.description?elements.description.slice(0,125):""} imageUrl = {elements.urlToImage} url = {elements.url}
           author = {elements.author} publishedAt = {elements.publishedAt} source = {elements.source.name}/>
           </div>
         ))  
@@ -150,6 +153,15 @@ export default class News extends Component {
     <button  disabled ={this.state.page+1>Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn" onClick={this.HandleNextClick} style={{backgroundColor:'black',
           color:"white"}}>Next  &rarr; </button>
     </div>
+    <div className="HText"><h1>Most Recent News</h1></div>
+    <div className="row my-3" style={{display:"flex" , flexDirection:'row'}}>
+        { (!this.state.loading) && this.state.articles.slice(0,6).map((elements, index)=>(
+          <div className="col-md-4 my-3 ml-04" key={index}>
+          <SmallCards key  = {index} title = {elements.title?elements.title.slice(0,45):""} description = {elements.description?elements.description.slice(0,88):"Description Not Avalaible kindly click below to read the whole news"} url = {elements.url}/>
+          </div>
+        ))  
+        }
+        </div>
       </>
 
       // disabled ={this.state.page<=1}

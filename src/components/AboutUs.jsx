@@ -3,8 +3,8 @@ import React from 'react'
 const AboutUs = () => {
   let myStyle = 
     {
-      color :"#f3e7c9",
-      backgroundColor:"#774023"
+      color :"#fefefe",
+      backgroundColor:"#94A3B8"
     }
   return (
     
@@ -13,18 +13,15 @@ const AboutUs = () => {
         <section className="py-3 py-md-5 py-xl-8">
   <div className="container" style={{marginTop:"180px"}}>
     <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-      <div className="col-12 col-lg-6 col-xl-5" style={{height:634}}>
-        <img className="img-fluid" loading="lazy" srcSet="NewsHarvest.gif" alt="Logo"/>
-
-        <div className="container" style={{marginLeft : "64px"}}>
-
-        </div>
-
+      <div className="col-12 col-lg-6 col-xl-5 logo" style={{height:634}}>
+      <div className='logoText' style={{fontSize:"50px", display:'flex', alignItems:'center', justifyContent:'center', marginTop:'250px', fontWeight:'bolder', border:'4px solid black', borderStyle:'double'}}>
+       NewsHarvest
+      </div>
       </div>
       <div className="col-12 col-lg-6 col-xl-7">
         <div className="row justify-content-xl-center">
           <div className="col-12 col-xl-11">
-            <h2 className="h1 mb-3 heading">What Are We?</h2>
+            <h2 className="h2 mb-3 heading container">What Are We?</h2>
             <p className="lead fs-4 text-secondary mb-3">"A news organization passionate about keeping people informed and connected with global events. Our application aggregates news from various reputable sources worldwide, allowing users to explore articles categorized by their topics of interest. Our goal is to provide a convenient and comprehensive platform for accessing diverse perspectives on current affairs."</p>
             <p className="mb-5">This a Web Appication that provides the way to read the news from different sources effectively and conventionally
             Looking for more several updates in the future
@@ -72,9 +69,9 @@ const AboutUs = () => {
       What we do?
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" style={{color:'#774023'}} >
-      <div className="accordion-body" style={{color:'#774023',
-    backgroundColor:"#f3e7c9"}}>
+    <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" style={myStyle} >
+      <div className="accordion-body" style={{color:'#334155',
+    backgroundColor:"#fefefe"}}>
         <strong>We help us gain knowledge all around the world </strong> Empowering with comprehensive insights, our website aggregates data from diverse sources, offering a holistic view of current events across India. Stay informed and enlightened about the latest happenings, trends, and developments, enabling deeper understanding and informed decision-making. Your gateway to knowledge, tailored for the Indian context. 
       </div>
     </div>
@@ -86,8 +83,8 @@ const AboutUs = () => {
       </button>
     </h2>
     <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" style={myStyle}>
-      <div className="accordion-body" style={{color:'#774023',
-    backgroundColor:"#f3e7c9"}}>
+      <div className="accordion-body" style={{color:'#334155',
+    backgroundColor:"#fefefe"}}>
         <strong>We are a news organization</strong> We are a pioneering news organization dedicated to delivering comprehensive coverage of India's events by sourcing data from diverse channels. Our mission is to provide insightful analysis and facilitate a deeper understanding of the country's happenings, empowering informed citizens with knowledge to navigate their world effectively.
       </div>
     </div>
@@ -99,8 +96,8 @@ const AboutUs = () => {
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse" style={myStyle}>
-      <div className="accordion-body"style={{color:'#774023',
-    backgroundColor:"#f3e7c9"}}>
+      <div className="accordion-body"style={{color:'#334155',
+    backgroundColor:"#fefefe"}}>
         <strong>Gather News from Different Resources</strong> Utilizing advanced data gathering techniques, we scour various resources across multiple categories to curate a rich tapestry of news from India. Employing algorithms and user-friendly interfaces, we present this information in an easily accessible manner, tailored to individual preferences. Our platform is designed to empower users with comprehensive insights, enabling them to stay informed about the latest developments in India with efficiency and ease.
       </div>
     </div>

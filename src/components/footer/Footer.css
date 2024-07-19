@@ -4,29 +4,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:#f3e7c9 ;
+    color:#fefefe ;
     /* width: 100%; */
 }
 .footerIcons{
   
     display: flex;
     gap: 20px;
+   
+    .icon{
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color:#484848 ;
+        cursor: pointer;
+        -webkit-transition-duration : 0.3s;
+        transition-duration: 0.3s; 
+        -webkit-transition-property:  transform;
+        transition-property:transform;
+    }
 }
-.icon{
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    border-radius: 50%;
-    background-color:#484848 ;
+.icon:hover{
+    -webkit-transform : scale(1.1);
+    transform: scale(1.1);
 }
-.subIcon{
-    color: white;
+    .subIcon{
+        color: white;
+        
+        width: 30px;
+        height: 30px;
+    }
     
-    width: 30px;
-    height: 30px;
-}
-
 @media screen and (max-width :500px) {
     .footer{
         flex-direction: column;

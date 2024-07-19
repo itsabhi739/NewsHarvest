@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './NewsItem.css';
 
 const NewsItem = (props) => {
   
@@ -10,10 +11,10 @@ const NewsItem = (props) => {
     }
     return (
       <>
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card" style={{ width: "18rem" , marginLeft:"60px" , marginTop:'50px'}}>
           <img src={!imageUrl ?
             "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=2048x2048&w=is&k=20&c=ohMtddTt7BppCvEUNGqJ9FRDyJqAdkzonVQ7KmWbTrg=" : imageUrl} className="card-img-top" alt="..." />
-          <div className="card-body">
+          <div className="card-body ">
             <h5 className="card-title">{title}<span className='position-absolute top-0  translate-middle badge rounded-pill bg-danger' style = {{zIndex:'1',
           left:'90%'}}>
               {source}
@@ -21,7 +22,7 @@ const NewsItem = (props) => {
             </span></h5>
             <p className="card-text">{description}</p>
             <p className="card-text"><small className="text-body-secondary"> By {author ? author : "Unknown"} on {new Date(publishedAt).toTimeString()}</small></p>
-            <a href={url} target='_blank' className="btn btn-sm" style={{backgroundColor:'black',
+            <a href={url} target='_blank' className="btn btn-sm button" style={{backgroundColor:'black',
           color:"white"}} >Read More..</a>
           </div>
         </div>

@@ -12,6 +12,7 @@ import LoadingBar from 'react-top-loading-bar'
 import AboutUs from './components/AboutUs'
 import Contact from './components/Contact'
 import Search from './components/Search'
+import HeroSection from './components/HeroSection/HeroSection'
 
 export default class App extends Component {
 
@@ -38,6 +39,7 @@ export default class App extends Component {
      
       <NavBarCate />
       </div>
+     
       <Routes>
            <Route exact path='/' element={<News setProgress = {this.setProgress} key = {'general'} pageSize = {9} country ="in" category = {'general'}/>} />
            <Route exact path='/business' element={<News setProgress = {this.setProgress} key = {'business'} pageSize = {9} country ="in" category = {'business'}/>} />
@@ -48,10 +50,7 @@ export default class App extends Component {
            <Route exact path='/technology' element={<News setProgress = {this.setProgress} key = {'technology'} pageSize = {9} country ="in" category = {'technology'}/>} />
            <Route exact path='/aboutus' element={<AboutUs/>} />
            <Route exact path='/contactus' element={<Contact/>} />
-           <Route exact path='/search' element={<Search /> } />
-
- 
-           
+           <Route exact path='/search' element={<Search /> } />     
          </Routes>
       <Footer/>
       </Router>
