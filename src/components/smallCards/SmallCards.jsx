@@ -9,7 +9,7 @@ const SmallCards = (props) => {
       <div class="card-body cardBody">
         <h5 class="card-title">{title}...</h5>
         <p class="card-text">{description}...</p>
-        <a href={url} class="btn  button">Read Article...</a>
+        <a href={url} class="btn  button" target='_blank' >Read Article...</a>
       </div>
     </div>
   </div>
