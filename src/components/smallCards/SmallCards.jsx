@@ -1,5 +1,5 @@
 import React from 'react'
-import './SmallCards.css'
+import "./SmallCards.css"
 const SmallCards = (props) => {
     let { title, description, url} = props;
   return (

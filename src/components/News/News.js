@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import NewsItem from './NewsItem'
-import Spinner from './Spinner';
+import Spinner from '../Spinner';
 import PropTypes from 'prop-types'
-import SmallCards from './smallCards/SmallCards'
-import "./smallCards/SmallCards.css"
-import HeroSection from './HeroSection/HeroSection';
-export default class News extends Component {
+import SmallCards from '../smallCards/SmallCards'
+import "../smallCards/SmallCards.css"
+import HeroSection from '../HeroSection/HeroSection';
+import Carousels from '../Carousel/Carousels';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
+export default class News extends Component {
   static defaultProps = {
     country:'in',
     pageSize : 8
@@ -126,17 +129,26 @@ export default class News extends Component {
       return string.charAt(0).toUpperCase() + string.slice(1);
   }
   render() {
-   
+    const responsive = {
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 1
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 1
+      },
+    };
     return (
       <>
        <HeroSection/>
     <div className="container my-3"  >
       {/* <marquee behavior="scroll" direction="left" style = {{marginTop : '180px'}}>Welcome to the NewsHarvest - Access and grow with all the news </marquee> */}
-        <h2 className='my-3 text-center' >{`NewsHarvest ${this.capitalizeFirstLetter(this.props.category)}`}- Top Headlines</h2>
+        <h2 className='my-30 text-center' >{`NewsHarvest ${this.capitalizeFirstLetter(this.props.category)}`}- Top Headlines</h2>
         {this.state.loading && <Spinner/>}
         <div className="container my-3">
           </div>
-      <div className="row my-3">
+      <div className="row my-3" style={{marginBottom :'30px'}}>
         { (!this.state.loading) && this.state.articles.map((elements, index)=>(
         
           <div className="col-md-4 my-3" key={index}>
@@ -147,13 +159,30 @@ export default class News extends Component {
         }
         </div>
     </div>
-    <div className="container d-flex justify-content-between my-3" >
+    <div className="container d-flex justify-content-between my-3" style={{marginBottom :'30px'}} >
     <button disabled ={this.state.page<=1} type="button" className="btn" onClick={this.HandlePrevClick} style={{backgroundColor:'black',
           color:"white"}}>Previous &#x2190;</button>
     <button  disabled ={this.state.page+1>Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn" onClick={this.HandleNextClick} style={{backgroundColor:'black',
           color:"white"}}>Next  &rarr; </button>
     </div>
-    <div className="HText"><h1>Most Recent News</h1></div>
+    <Carousel responsive={responsive} swipeable={false}
+  draggable={false}
+  showDots={true}
+  infinite={true}
+  // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+  // autoPlaySpeed={3000}
+  keyBoardControl={true}
+  customTransition="all .5">
+  
+        { (!this.state.loading) && this.state.articles.slice(0,5).map((elements, index)=>(
+          <div className="my-3 ml-04 flex box" key={index}>
+          <Carousels key  = {index} title = {elements.title?elements.title.slice(0,45):""} Img = {elements.urlToImage} url = {elements.url} description = {elements.description?elements.description.slice(0,88):"Description Not Avalaible kindly click below to read the whole news"}/>
+          </div>
+        ))  
+        }
+        </Carousel>
+
+    <div className="HText" style={{marginTop:"30px"}}><h1>{`Most Popular`} </h1></div>
     <div className="row my-3" style={{display:"flex" , flexDirection:'row'}}>
         { (!this.state.loading) && this.state.articles.slice(0,6).map((elements, index)=>(
           <div className="col-md-4 my-3 ml-04" key={index}>
@@ -162,6 +191,8 @@ export default class News extends Component {
         ))  
         }
         </div>
+
+        
       </>
 
       // disabled ={this.state.page<=1}

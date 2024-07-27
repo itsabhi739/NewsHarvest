@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navbar'
-import News from './components/News'
-import NavBarCate from './components/NavBarCate'
+import Navbar from './components/Navbar/Navbar'
+import News from './components/News/News'
+import NavBarCate from './components/NavBarCate/NavBarCate'
 import Footer from './components/footer/Footer'
 import {
   BrowserRouter as Router,
@@ -11,7 +11,7 @@ import {
 import LoadingBar from 'react-top-loading-bar'
 import AboutUs from './components/AboutUs'
 import Contact from './components/Contact'
-import Search from './components/Search'
+import Search from './components/SearchComp/Search'
 import HeroSection from './components/HeroSection/HeroSection'
 
 export default class App extends Component {
@@ -29,7 +29,7 @@ export default class App extends Component {
     return (
       <>
       <Router>
-        <div className='fixed-top'>
+         <div className=''> {/* //fixed-top */}
         <LoadingBar
         color='red'
         height={3}
@@ -50,7 +50,7 @@ export default class App extends Component {
            <Route exact path='/technology' element={<News setProgress = {this.setProgress} key = {'technology'} pageSize = {9} country ="in" category = {'technology'}/>} />
            <Route exact path='/aboutus' element={<AboutUs/>} />
            <Route exact path='/contactus' element={<Contact/>} />
-           <Route exact path='/search' element={<Search /> } />     
+           <Route exact path='/search' element={<Search /> } /> 
          </Routes>
       <Footer/>
       </Router>

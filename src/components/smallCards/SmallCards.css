@@ -100,3 +100,10 @@
 .container>h2:hover::after{
     width: 0;
 }
+
+
+.box
+{
+    display: flex;
+    align-items: center;
+}
