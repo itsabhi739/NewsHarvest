@@ -1,76 +1,82 @@
 .Hero{
     position: relative;
 margin-top: -50px;
-background-image: url(/public/assets/Hero1.jpg);
+background-image: url(/public/assets/HERO.png);
 background-size: cover;
 height: 110vh;
 background-repeat: no-repeat;
 width: 100%;
 z-index: -1 ;
-filter: opacity(90%);
+filter: opacity(100%);
 /* filter: blur(5px); */
 
 }
 
 .Herotext .h1>h1{
     position: absolute;
-    top: 260px;
-   left: 700px;
-    color: rgb(17, 255, 0);
+    top: 410px;
+    left: 830px;
+    color: rgb(243, 243, 243);
     font-weight: bold;
     font-size: 50px;
     z-index: 2;
+    /* -webkit-text-stroke: 2px black; 
+    -webkit-text-stroke-color: black;  */
 
 }
 
 .Herotext .h3>h1{
     position: absolute;
-    top: 400px;
-   left: 700px;
+    top: 550px;
+   left: 830px;
     color: rgb(255, 0, 0);
     font-weight: bold;
     font-size: 60px;
-    z-index: 2;
-    /* -webkit-text-stroke: 2px black; */
-    /* -webkit-text-stroke-color: black; */
+    z-index: 10;
+    text-shadow: 2px 2px #e8d9d9;
+    
+    
 }
 .Herotext .h2>h1{
     position: absolute;
-    top: 330px;
-   left: 700px;
-    color: rgb(8, 0, 255);
+    top: 480px;
+    left: 830px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 50px;
+    z-index: 2;
+    /* -webkit-text-stroke: 2px black; 
+     -webkit-text-stroke-color: black;  */
+}
+
+.Herotext .h1>span{
+    position: absolute;
+    top: 410px;
+    right: 700px;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 50px;
     z-index: 2;
     
 }
 
-.Herotext .h1>span{
-    position: absolute;
-    top: 260px;
-   left: 680px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 50px;
-    z-index: 2;
-}
-
 .Herotext .h2>span{
     position: absolute;
-    top: 330px;
-   left: 680px;
+    top: 480px;
+    right: 700px;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 50px;
     z-index: 2;
+    
 
 
 }
 .Herotext .h3>span{
     position: absolute;
-    top: 400px;
-   left: 680px;
-    color: rgb(0, 0, 0);
+    top: 550px;
+   right: 700px;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 60px;
     z-index: 2;
@@ -80,8 +86,8 @@ filter: opacity(90%);
 .Herobutton{
     position: absolute;
     color:white ;
-    top: 500px;
-    left: 700px;
+    top: 650px;
+    left: 820px;
     z-index: 2;
     font-weight: 600;
     background-color: black;
@@ -98,5 +104,38 @@ filter: opacity(90%);
     /* transition: 0.3s; */
     -webkit-transform : scale(1.1);
     transform: scale(1.1);
+}
+
+.join>h1{
+
+    position: absolute;
+    top: 174px;
+    left: 148px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 75px;
+    z-index: 2;
+}
+.conversation>h2{
+
+    position: absolute;
+    top: 258px;
+    left: 145px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 75px;
+    z-index: 2;
+}
+
+.conversation>p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 500px;
+    position: absolute;
+    top:210px;
+    right: 215px;
+    z-index: 2;
+    font-size: large;
+    font-weight:700;
+    color: rgb(255, 255, 255);
 
 }

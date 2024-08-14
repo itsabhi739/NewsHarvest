@@ -11,7 +11,7 @@ const Navbar = () => {
     let myStyle = 
     {
       color :"#fff",
-      backgroundColor:"#334155",
+      backgroundColor:"#000000",
     }
 
 
@@ -28,16 +28,16 @@ const Navbar = () => {
     <div className="collapse navbar-collapse position-relative" id="navbarSupportedContent" >
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className=" navItem nav-item">
-          <a className="nav-link active my-3" aria-current="page" href="/"style={{ padding:'8px 35px 8px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>Home</a>
+          <a className="nav-link active my-3" aria-current="page" href="/"style={{ padding:'4px 35px 4px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>Home</a>
         </li>
         <li className="nav-item navItem ">
-          <a className="nav-link my-3" href="/aboutus"style={{padding:'8px 35px 8px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>About Us</a>
+          <a className="nav-link my-3" href="/aboutus"style={{padding:'4px 35px 4px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>About Us</a>
         </li>
         <li className="nav-item navItem ">
-          <a className="nav-link my-3" href="/contactus"style={{padding:'8px 35px 8px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>Contact Us</a>
+          <a className="nav-link my-3" href="/contactus"style={{padding:'4px 35px 4px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>Contact Us</a>
         </li>
         <li className="nav-item navItem ">
-          <a className="nav-link my-3" href="/search"style={{padding:'8px 35px 8px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>Search</a>
+          <a className="nav-link my-3" href="/search"style={{padding:'4px 35px 4px 35px' ,display:'flex',alignItems:"center" , color :"white", justifyContent:'center'}}>Search</a>
         </li>
         {
           isAuthenticated && <li className='username'><p className='userName'>
@@ -60,6 +60,10 @@ const Navbar = () => {
           </li>
         </div>)
         }
+         <li className="nav-item navItem ">
+         <input type="checkbox" id="darkmode-toggle" className='darkModeToggle'/>
+         <label for="darkmode-toggle"/>
+        </li>
       </ul>
     </div>
   </div>

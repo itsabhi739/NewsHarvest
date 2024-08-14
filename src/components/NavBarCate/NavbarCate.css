@@ -1,4 +1,6 @@
 .nav-item
 {
     transition: all 0.3s;
+    color: black;
+    border: 2px solid black;
 }
